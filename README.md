@@ -8,7 +8,7 @@ The package is designed to reproduce the review's reported counts, percentages, 
 
 - `data/screening/`: full-text screening decisions for 156 assessed records.
 - `data/extraction/`: extraction matrix for the 84 included studies.
-- `data/coding/`: evidence-maturity, dataset, metric, baseline, temporal, and reliability coding.
+- `data/coding/`: evidence-maturity, dataset, metric, baseline, temporal, explanation-scope/reliability, and coding-reliability records.
 - `data/canonical/study_master.csv`: canonical 84-study record used for the final synthesis.
 - `derived/table_data/`: machine-readable data underlying the quantitative tables.
 - `derived/figure_data/`: machine-readable data or definitions underlying Figures 1–5.

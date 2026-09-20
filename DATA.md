@@ -11,6 +11,7 @@ This repository releases the review records needed to audit and reproduce the qu
 - dataset-provenance and validation-design coding;
 - metric and baseline coding;
 - temporal/design coding;
+- explanation-scope and explanation-guided reliability coding;
 - coding-reliability records;
 - derived table and figure data.
 

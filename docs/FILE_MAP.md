@@ -9,7 +9,7 @@ This file maps the review's quantitative artifacts to the public data used to re
 | PRISMA study-selection counts | `data/screening/full_text_screening.csv`, `docs/search_protocol.md`, `derived/figure_data/figure_01_prisma_counts.csv` |
 | Selected-studies appendix / Table A1 | `data/canonical/study_master.csv`, `derived/table_data/selected_studies_compact.csv` |
 | Search sources and query notes | `docs/search_protocol.md` |
-| Evidence-maturity codebook | `docs/coding_codebook.md` |
+| Evidence-maturity and explanation-scope/reliability codebook | `docs/coding_codebook.md` |
 | Closest prior SLR comparison and directly verifiable XAI-subset overlap | `docs/CLOSEST_PRIOR_SLR_COMPARISON.md`, `derived/table_data/closest_prior_slr_xai_overlap.csv` |
 
 ## Quantitative tables
@@ -25,6 +25,7 @@ This file maps the review's quantitative artifacts to the public data used to re
 | Reproducibility and claim risk | `derived/table_data/evidence_maturity.csv` |
 | Sensitivity/robustness cuts | `derived/table_data/sensitivity_analysis.csv` |
 | Coding reliability | `derived/table_data/coding_reliability.csv` |
+| Local/global explanation scope and reliability evidence | `data/coding/explanation_scope_reliability.csv`, `derived/table_data/explanation_scope_reliability.csv` |
 
 ## Figures
 

@@ -31,7 +31,8 @@ This command reads the public study-level records and regenerates:
 - `derived/aggregate_results.json`;
 - quantitative table payloads under `derived/table_data/`;
 - figure data/definitions under `derived/figure_data/`;
-- the coding-reliability table from the two coding passes in S6.
+- the coding-reliability table from the two coding passes in S6;
+- the explanation-scope and explanation-guided reliability summary from `data/coding/explanation_scope_reliability.csv`.
 
 The script does not read the manuscript and does not use hard-coded local filesystem paths.
 
@@ -49,6 +50,9 @@ The gate checks:
 - 63/84 studies in 2025–2026;
 - 76 core post-hoc and 8 mixed-purpose studies;
 - SHAP in 58 studies and LIME in 46;
+- explanation scope: 34 local-only, 14 global-only, and 36 studies using both scopes;
+- overlapping explanation use: 70 studies with local explanations and 50 with global explanations;
+- 2 studies with relatively direct positive explanation-guided reliability evidence;
 - validation-design counts;
 - trust, operational, validation-gate, reproducibility, and claim-risk counts;
 - 72-study holdout agreement, Cohen/weighted kappa, and Gwet AC1 values.
@@ -75,7 +79,7 @@ Figures 1, 3, and 5 are directly data-driven. Figures 2 and 4 are conceptual sum
 
 ## Reproduce table data
 
-Files in `derived/table_data/` are regenerated from the canonical study-level dataset and the metric/baseline coding files. `docs/FILE_MAP.md` maps each manuscript table to its source or generated payload.
+Files in `derived/table_data/` are regenerated from the canonical study-level dataset and the metric, baseline, and explanation-scope/reliability coding files. `docs/FILE_MAP.md` maps each manuscript table to its source or generated payload.
 
 ## Reliability statistics
 

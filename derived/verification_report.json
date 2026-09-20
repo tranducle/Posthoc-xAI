@@ -14,7 +14,11 @@
     "operational": true,
     "validation_gate": true,
     "reproducibility": true,
-    "claim_risk": true
+    "claim_risk": true,
+    "explanation_scope": true,
+    "explanation_scope_any_local": true,
+    "explanation_scope_any_global": true,
+    "direct_positive_reliability_evidence": true
   },
   "screening": {
     "rows": 156,
@@ -34,6 +38,23 @@
     "mixed_purpose": {
       "n": 8,
       "pct": 9.5
+    },
+    "explanation_scope_counts": {
+      "both": 36,
+      "local_only": 34,
+      "global_only": 14
+    },
+    "explanation_scope_any_local": {
+      "n": 70,
+      "pct": 83.3
+    },
+    "explanation_scope_any_global": {
+      "n": 50,
+      "pct": 59.5
+    },
+    "direct_positive_reliability_evidence": {
+      "n": 2,
+      "pct": 2.4
     },
     "SHAP": 58,
     "LIME": 46

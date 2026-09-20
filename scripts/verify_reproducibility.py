@@ -29,6 +29,7 @@ coding_files = [
     DATA / "coding" / "metric_ecology.csv",
     DATA / "coding" / "baseline_comparison.csv",
     DATA / "coding" / "temporal_design.csv",
+    DATA / "coding" / "explanation_scope_reliability.csv",
     DATA / "coding" / "coding_reliability.csv",
 ]
 
@@ -94,6 +95,10 @@ expected = {
     },
     "reproducibility_counts": {"moderate": 65, "high": 10, "low": 8, "unclear": 1},
     "claim_risk_counts": {"moderate": 51, "high": 22, "low": 11},
+    "explanation_scope_counts": {"local_only": 34, "global_only": 14, "both": 36},
+    "explanation_scope_any_local": {"n": 70, "pct": 83.3},
+    "explanation_scope_any_global": {"n": 50, "pct": 59.5},
+    "direct_positive_reliability_evidence": {"n": 2, "pct": 2.4},
 }
 
 checks = {
@@ -110,6 +115,10 @@ checks = {
     "validation_gate": aggregates.get("gate_counts") == expected["gate_counts"],
     "reproducibility": aggregates.get("reproducibility_counts") == expected["reproducibility_counts"],
     "claim_risk": aggregates.get("claim_risk_counts") == expected["claim_risk_counts"],
+    "explanation_scope": aggregates.get("explanation_scope_counts") == expected["explanation_scope_counts"],
+    "explanation_scope_any_local": aggregates.get("explanation_scope_any_local") == expected["explanation_scope_any_local"],
+    "explanation_scope_any_global": aggregates.get("explanation_scope_any_global") == expected["explanation_scope_any_global"],
+    "direct_positive_reliability_evidence": aggregates.get("direct_positive_reliability_evidence") == expected["direct_positive_reliability_evidence"],
 }
 for name, passed in checks.items():
     if not passed:
@@ -147,6 +156,10 @@ report = {
         "recent_2025_2026": aggregates["recent_2025_2026"],
         "core_posthoc": aggregates["core"],
         "mixed_purpose": aggregates["mixed"],
+        "explanation_scope_counts": aggregates["explanation_scope_counts"],
+        "explanation_scope_any_local": aggregates["explanation_scope_any_local"],
+        "explanation_scope_any_global": aggregates["explanation_scope_any_global"],
+        "direct_positive_reliability_evidence": aggregates["direct_positive_reliability_evidence"],
         "SHAP": aggregates["xai_method_counts"]["SHAP"],
         "LIME": aggregates["xai_method_counts"]["LIME"],
     },

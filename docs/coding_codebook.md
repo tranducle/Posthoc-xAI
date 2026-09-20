@@ -241,6 +241,54 @@ G2 indicates a claim-evidence mismatch. It is not a recommendation to reject the
 
 ---
 
+## Axis H: Explanation scope
+
+This axis records how the explanation is actually used in the primary study. The theoretical capability of an explainer is not sufficient for coding.
+
+### H1. Local only
+
+Assign H1 when the study explains an individual prediction or artifact, such as one URL, email, message, screenshot, token/region, or counterfactual case, and does not report an aggregate model-level explanation.
+
+Typical evidence includes instance-level LIME, a SHAP force or waterfall plot for one sample, Grad-CAM or saliency for one image, token-level attribution, or a natural-language rationale for one prediction.
+
+### H2. Global only
+
+Assign H2 when the study reports aggregate/model-level explanation across observations, such as global feature importance, mean absolute SHAP ranking, summary or beeswarm plots, aggregate feature-effect analysis, or cross-dataset feature-ranking comparisons, without an explicit instance-level explanation.
+
+### H3. Both local and global
+
+Assign H3 only when both local and global explanation uses are explicitly documented in the study.
+
+**Boundary rule:** a method such as SHAP is not automatically coded as both. Scope is determined from the reported explanation artifacts and their use.
+
+---
+
+## Axis I: Explanation-guided reliability evidence
+
+This axis addresses whether explanation output is linked to measured changes in predictive reliability. It is distinct from human trust and from efficiency.
+
+### I0. Not applicable to causal reliability
+
+Assign I0 when the explanation is applied after model training for interpretation, interface support, or failure analysis and does not change the model or feature set. Such studies may improve observability but cannot establish that the explainer itself improved predictive reliability.
+
+### I1. No isolated reliability effect
+
+Assign I1 when explanation output affects model development, but no matched before/after, ablation, or otherwise reasonably comparable reliability outcome isolates that effect.
+
+### I2. Efficiency or compactness evidence only
+
+Assign I2 when explanation-guided refinement reduces feature count, runtime, latency, or another resource cost without demonstrating improvement in predictive reliability.
+
+### I3. Direct comparative reliability evidence
+
+Assign I3 when explanation-guided feature/model refinement is compared against a no-refinement or alternative configuration using predictive outcomes such as error rate, false negatives, AUC, cross-source/temporal generalization, robustness, calibration, stability, or directly comparable classification performance.
+
+The effect direction is recorded separately as positive, negative/trade-off, mixed/dataset-dependent, or not established.
+
+**Causal boundary:** higher accuracy in a detector that merely includes a post-hoc explainer is not evidence that XAI improved reliability. The explanation output must change the model, feature set, or refinement decision, and the study must report a reasonably comparable outcome.
+
+---
+
 ## Borderline cases
 
 ### Rashid et al.: one-shot URL classification and explanation with LLMs

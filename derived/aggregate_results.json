@@ -131,6 +131,23 @@
     "n": 8,
     "pct": 9.5
   },
+  "explanation_scope_counts": {
+    "both": 36,
+    "local_only": 34,
+    "global_only": 14
+  },
+  "explanation_scope_any_local": {
+    "n": 70,
+    "pct": 83.3
+  },
+  "explanation_scope_any_global": {
+    "n": 50,
+    "pct": 59.5
+  },
+  "direct_positive_reliability_evidence": {
+    "n": 2,
+    "pct": 2.4
+  },
   "metric_counts": {
     "accuracy": 79,
     "precision": 61,

@@ -21,6 +21,7 @@ MASTER = DATA / "canonical" / "study_master.csv"
 METRICS = DATA / "coding" / "metric_ecology.csv"
 BASELINES = DATA / "coding" / "baseline_comparison.csv"
 RELIABILITY = DATA / "coding" / "coding_reliability.csv"
+SCOPE_RELIABILITY = DATA / "coding" / "explanation_scope_reliability.csv"
 
 TABLES.mkdir(parents=True, exist_ok=True)
 FIGURES.mkdir(parents=True, exist_ok=True)
@@ -122,9 +123,12 @@ master = read_csv(MASTER)
 metrics = read_csv(METRICS)
 baselines = read_csv(BASELINES)
 reliability = read_csv(RELIABILITY)
+scope_reliability = read_csv(SCOPE_RELIABILITY)
 
 if len(master) != 84:
     raise RuntimeError(f"Expected 84 included studies, found {len(master)}")
+if len(scope_reliability) != 84:
+    raise RuntimeError(f"Expected 84 explanation-scope records, found {len(scope_reliability)}")
 
 n = len(master)
 recent = [r for r in master if r["year"] in {"2025", "2026"}]
@@ -145,6 +149,13 @@ for row in master:
 trust = Counter(r["trust_evidence_level"] for r in master)
 operational = Counter(r["operational_evidence_level"] for r in master)
 gate = Counter(r["validation_gate_reached"] for r in master)
+scope_counts = Counter(r["explanation_scope_category"] for r in scope_reliability)
+scope_any_local = yes_count(scope_reliability, "local_scope_present")
+scope_any_global = yes_count(scope_reliability, "global_scope_present")
+direct_positive_reliability = sum(
+    r["reliability_effect_direction"] in {"positive", "positive_with_internal_baseline_inconsistency"}
+    for r in scope_reliability
+)
 
 aggregates = {
     "n": n,
@@ -167,6 +178,13 @@ aggregates = {
     "mixed_purpose_counts": dict(Counter(r["mixed_purpose_xai"] for r in master)),
     "core": {"n": len(core), "pct": pct(len(core), n)},
     "mixed": {"n": len(mixed), "pct": pct(len(mixed), n)},
+    "explanation_scope_counts": dict(scope_counts),
+    "explanation_scope_any_local": {"n": scope_any_local, "pct": pct(scope_any_local, n)},
+    "explanation_scope_any_global": {"n": scope_any_global, "pct": pct(scope_any_global, n)},
+    "direct_positive_reliability_evidence": {
+        "n": direct_positive_reliability,
+        "pct": pct(direct_positive_reliability, n),
+    },
     "metric_counts": {
         field: yes_count(metrics, field)
         for field in [
@@ -237,6 +255,41 @@ write_csv(
         for field in baseline_fields
     ],
 )
+
+# Table data: explanation scope and explanation-guided reliability.
+scope_summary = [
+    {
+        "category": "local_only",
+        "study_count": scope_counts.get("local_only", 0),
+        "percentage_of_84": pct(scope_counts.get("local_only", 0), n),
+    },
+    {
+        "category": "global_only",
+        "study_count": scope_counts.get("global_only", 0),
+        "percentage_of_84": pct(scope_counts.get("global_only", 0), n),
+    },
+    {
+        "category": "both_local_and_global",
+        "study_count": scope_counts.get("both", 0),
+        "percentage_of_84": pct(scope_counts.get("both", 0), n),
+    },
+    {
+        "category": "any_local",
+        "study_count": scope_any_local,
+        "percentage_of_84": pct(scope_any_local, n),
+    },
+    {
+        "category": "any_global",
+        "study_count": scope_any_global,
+        "percentage_of_84": pct(scope_any_global, n),
+    },
+    {
+        "category": "direct_positive_reliability_evidence",
+        "study_count": direct_positive_reliability,
+        "percentage_of_84": pct(direct_positive_reliability, n),
+    },
+]
+write_csv(TABLES / "explanation_scope_reliability.csv", scope_summary)
 
 # Table data: primary explanation role by validation gate and operational evidence.
 role_rows = []
@@ -438,6 +491,14 @@ print(json.dumps({
     "recent_2025_2026": aggregates["recent_2025_2026"],
     "core_posthoc": aggregates["core"],
     "mixed_purpose": aggregates["mixed"],
+    "explanation_scope": {
+        "local_only": scope_counts.get("local_only", 0),
+        "global_only": scope_counts.get("global_only", 0),
+        "both": scope_counts.get("both", 0),
+        "any_local": scope_any_local,
+        "any_global": scope_any_global,
+    },
+    "direct_positive_reliability_evidence": direct_positive_reliability,
     "shap": xai.get("SHAP", 0),
     "lime": xai.get("LIME", 0),
     "outputs": {

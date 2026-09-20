@@ -42,6 +42,13 @@ class ReproductionTests(unittest.TestCase):
         self.assertEqual(payload["mixed"]["n"], 8)
         self.assertEqual(payload["xai_method_counts"]["SHAP"], 58)
         self.assertEqual(payload["xai_method_counts"]["LIME"], 46)
+        self.assertEqual(
+            payload["explanation_scope_counts"],
+            {"local_only": 34, "global_only": 14, "both": 36},
+        )
+        self.assertEqual(payload["explanation_scope_any_local"], {"n": 70, "pct": 83.3})
+        self.assertEqual(payload["explanation_scope_any_global"], {"n": 50, "pct": 59.5})
+        self.assertEqual(payload["direct_positive_reliability_evidence"], {"n": 2, "pct": 2.4})
 
 
 if __name__ == "__main__":
