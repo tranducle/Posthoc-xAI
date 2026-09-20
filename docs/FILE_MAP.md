@@ -10,6 +10,7 @@ This file maps the review's quantitative artifacts to the public data used to re
 | Selected-studies appendix / Table A1 | `data/canonical/study_master.csv`, `derived/table_data/selected_studies_compact.csv` |
 | Search sources and query notes | `docs/search_protocol.md` |
 | Evidence-maturity codebook | `docs/coding_codebook.md` |
+| Closest prior SLR comparison and directly verifiable XAI-subset overlap | `docs/CLOSEST_PRIOR_SLR_COMPARISON.md`, `derived/table_data/closest_prior_slr_xai_overlap.csv` |
 
 ## Quantitative tables
 
