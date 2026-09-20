@@ -1,0 +1,156 @@
+{
+  "n": 84,
+  "year_counts": {
+    "2021": 3,
+    "2022": 1,
+    "2023": 4,
+    "2024": 13,
+    "2025": 42,
+    "2026": 21
+  },
+  "recent_2025_2026": {
+    "n": 63,
+    "pct": 75.0
+  },
+  "modality_counts": {
+    "qr/quishing": 1,
+    "url": 26,
+    "website": 12,
+    "multimodal": 7,
+    "email": 19,
+    "visual": 5,
+    "url/website": 13,
+    "sms/smishing": 1
+  },
+  "url_web_core_scope": {
+    "n": 51,
+    "pct": 60.7
+  },
+  "web_expanded_scope": {
+    "n": 64,
+    "pct": 76.2
+  },
+  "xai_method_counts": {
+    "SHAP": 58,
+    "LIME": 46,
+    "LLM natural-language explanation": 9,
+    "attention/transformer visualization": 9,
+    "Grad-CAM": 3,
+    "Explainable Boosting Machine": 3,
+    "Grad-CAM/CAM": 3,
+    "counterfactual explanation": 2,
+    "analyst dashboard visualization": 1,
+    "PDP": 1,
+    "domain-brand inconsistency explanation": 1,
+    "IGAM": 1,
+    "hierarchical modality ablation": 1,
+    "BERTViz": 1,
+    "integrated gradients": 1,
+    "custom text-highlight explanation": 1,
+    "Shapash/ELI5": 1
+  },
+  "model_family_counts": {
+    "classical ML": 37,
+    "deep learning": 35,
+    "boosted trees": 34,
+    "transformer/LLM": 23,
+    "ensemble/AutoML": 22,
+    "hybrid ML/DL": 19,
+    "random forest": 14,
+    "CNN": 10,
+    "optimization-assisted ML": 8,
+    "CNN/visual detector": 5,
+    "few-shot learning": 1,
+    "MLOps/adaptive lifecycle": 1
+  },
+  "dataset_provenance_counts": {
+    "custom/proprietary": 4,
+    "public benchmark": 51,
+    "mixed public/custom": 17,
+    "unclear/on request": 12
+  },
+  "validation_design_counts": {
+    "single dataset": 51,
+    "multi-dataset": 16,
+    "temporal/zero-day": 5,
+    "cross-dataset/external": 7,
+    "field/live": 1,
+    "unclear": 4
+  },
+  "trust_counts": {
+    "none/rhetorical": 66,
+    "automated proxy": 6,
+    "explicit human/user/analyst evaluation": 11,
+    "behavior/field outcome": 1
+  },
+  "operational_counts": {
+    "prototype/interface": 16,
+    "runtime/resource": 26,
+    "none": 37,
+    "workflow/lifecycle": 4,
+    "field setting": 1
+  },
+  "operational_any": {
+    "n": 47,
+    "pct": 56.0
+  },
+  "gate_counts": {
+    "interface": 14,
+    "artifact": 58,
+    "human interpretation": 11,
+    "decision/behavior": 1
+  },
+  "reproducibility_counts": {
+    "low": 8,
+    "moderate": 65,
+    "high": 10,
+    "unclear": 1
+  },
+  "claim_risk_counts": {
+    "moderate": 51,
+    "low": 11,
+    "high": 22
+  },
+  "role_counts": {
+    "operational interface support": 19,
+    "explanation-informed modeling": 6,
+    "model inspection": 26,
+    "local decision rationale": 24,
+    "robustness/failure analysis": 9
+  },
+  "mixed_purpose_counts": {
+    "no": 76,
+    "yes-feature-selection": 6,
+    "yes-model-simplification": 2
+  },
+  "core": {
+    "n": 76,
+    "pct": 90.5
+  },
+  "mixed": {
+    "n": 8,
+    "pct": 9.5
+  },
+  "metric_counts": {
+    "accuracy": 79,
+    "precision": 61,
+    "recall": 62,
+    "f1": 67,
+    "auc_roc": 33,
+    "confusion_matrix": 7,
+    "mcc_kappa": 5,
+    "statistical_test": 5,
+    "latency_inference": 19,
+    "runtime_training": 14,
+    "throughput": 3,
+    "memory_resource": 7,
+    "calibration": 2,
+    "human_user": 12,
+    "adversarial_robustness": 9
+  },
+  "baseline_richness_counts": {
+    "narrow/in-study only": 19,
+    "comparative/ablation-rich": 32,
+    "multi-family in-study": 33
+  }
+}

@@ -1,0 +1,8 @@
+﻿axis,n,exact_agreement_pct,cohen_kappa,kappa_type,gwet_ac1
+explanation_role_primary,72,100.0,1.0,Cohen kappa,1.0
+mixed_purpose_xai,72,91.7,0.729,Cohen kappa,0.907
+trust_evidence_level,72,97.2,0.404,quadratic-weighted Cohen kappa,0.971
+operational_evidence_level,72,98.6,0.935,quadratic-weighted Cohen kappa,0.983
+validation_gate_reached,72,95.8,0.434,quadratic-weighted Cohen kappa,0.955
+reproducibility_level,72,100.0,1.0,quadratic-weighted Cohen kappa,1.0
+claim_risk,72,80.6,0.659,quadratic-weighted Cohen kappa,0.746

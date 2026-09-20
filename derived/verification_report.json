@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "checks": {
+    "included_studies": true,
+    "year_counts": true,
+    "recent_2025_2026": true,
+    "core_posthoc": true,
+    "mixed_purpose": true,
+    "shap": true,
+    "lime": true,
+    "validation_design": true,
+    "trust": true,
+    "operational": true,
+    "validation_gate": true,
+    "reproducibility": true,
+    "claim_risk": true
+  },
+  "screening": {
+    "rows": 156,
+    "included": 84,
+    "excluded": 72
+  },
+  "canonical_master_rows": 84,
+  "headline_counts": {
+    "recent_2025_2026": {
+      "n": 63,
+      "pct": 75.0
+    },
+    "core_posthoc": {
+      "n": 76,
+      "pct": 90.5
+    },
+    "mixed_purpose": {
+      "n": 8,
+      "pct": 9.5
+    },
+    "SHAP": 58,
+    "LIME": 46
+  }
+}

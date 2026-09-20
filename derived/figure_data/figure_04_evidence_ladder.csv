@@ -1,0 +1,6 @@
+﻿level,validation_gate,claim_scope
+1,artifact,detector and explanation-artifact claims
+2,interface,bounded prototype/interface feasibility claims
+3,human interpretation,measured human interpretation or utility claims
+4,decision/behavior,measured decision or behavior claims
+5,field outcome,field security-outcome claims

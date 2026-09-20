@@ -1,0 +1,189 @@
+{
+  "temporal": {
+    "2021": {
+      "n": 3,
+      "SHAP": 1,
+      "LIME": 1,
+      "LT": 2,
+      "Op": 1,
+      "IH": 2,
+      "Mixed": 0,
+      "High": 0
+    },
+    "2022": {
+      "n": 1,
+      "SHAP": 1,
+      "LIME": 0,
+      "LT": 0,
+      "Op": 0,
+      "IH": 0,
+      "Mixed": 0,
+      "High": 0
+    },
+    "2023": {
+      "n": 4,
+      "SHAP": 3,
+      "LIME": 1,
+      "LT": 2,
+      "Op": 2,
+      "IH": 1,
+      "Mixed": 0,
+      "High": 0
+    },
+    "2024": {
+      "n": 13,
+      "SHAP": 9,
+      "LIME": 8,
+      "LT": 1,
+      "Op": 6,
+      "IH": 2,
+      "Mixed": 4,
+      "High": 2
+    },
+    "2025": {
+      "n": 42,
+      "SHAP": 28,
+      "LIME": 27,
+      "LT": 3,
+      "Op": 26,
+      "IH": 15,
+      "Mixed": 2,
+      "High": 16
+    },
+    "2026": {
+      "n": 21,
+      "SHAP": 16,
+      "LIME": 9,
+      "LT": 2,
+      "Op": 12,
+      "IH": 6,
+      "Mixed": 2,
+      "High": 4
+    }
+  },
+  "roles": {
+    "operational interface support": {
+      "n": 19,
+      "gates": {
+        "interface": 12,
+        "human interpretation": 6,
+        "decision/behavior": 1
+      },
+      "operational": {
+        "prototype/interface": 15,
+        "workflow/lifecycle": 4
+      },
+      "human": 7,
+      "high": 6
+    },
+    "explanation-informed modeling": {
+      "n": 6,
+      "gates": {
+        "artifact": 6
+      },
+      "operational": {
+        "runtime/resource": 3,
+        "none": 3
+      },
+      "human": 0,
+      "high": 0
+    },
+    "local decision rationale": {
+      "n": 24,
+      "gates": {
+        "artifact": 19,
+        "human interpretation": 5
+      },
+      "operational": {
+        "none": 12,
+        "runtime/resource": 11,
+        "field setting": 1
+      },
+      "human": 5,
+      "high": 7
+    },
+    "model inspection": {
+      "n": 26,
+      "gates": {
+        "artifact": 25,
+        "interface": 1
+      },
+      "operational": {
+        "none": 17,
+        "runtime/resource": 8,
+        "prototype/interface": 1
+      },
+      "human": 0,
+      "high": 8
+    },
+    "robustness/failure analysis": {
+      "n": 9,
+      "gates": {
+        "artifact": 8,
+        "interface": 1
+      },
+      "operational": {
+        "runtime/resource": 4,
+        "none": 5
+      },
+      "human": 0,
+      "high": 1
+    }
+  },
+  "baseline": {
+    "classical_ml": 55,
+    "boosted_ensemble": 45,
+    "deep_transformer_llm": 41,
+    "optimization_metaheuristic": 8,
+    "ablation_feature_fusion": 12,
+    "external_literature": 18,
+    "operational_service": 7,
+    "richness": {
+      "narrow/in-study only": 19,
+      "comparative/ablation-rich": 32,
+      "multi-family in-study": 33
+    }
+  },
+  "robustness": {
+    "all": {
+      "studies": 84,
+      "recent": 63,
+      "public": 51,
+      "single": 51,
+      "human": 12,
+      "op": 47,
+      "SHAP": 58,
+      "LIME": 46
+    },
+    "core": {
+      "studies": 76,
+      "recent": 59,
+      "public": 43,
+      "single": 46,
+      "human": 12,
+      "op": 43,
+      "SHAP": 52,
+      "LIME": 41
+    },
+    "urlweb": {
+      "studies": 51,
+      "recent": 36,
+      "public": 39,
+      "single": 31,
+      "human": 3,
+      "op": 23,
+      "SHAP": 40,
+      "LIME": 25
+    },
+    "other": {
+      "studies": 33,
+      "recent": 27,
+      "public": 12,
+      "single": 20,
+      "human": 9,
+      "op": 24,
+      "SHAP": 18,
+      "LIME": 21
+    }
+  }
+}

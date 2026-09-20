@@ -1,0 +1,47 @@
+﻿axis,category,study_count
+detection_target,url,26
+detection_target,email,19
+detection_target,url/website,13
+detection_target,website,12
+detection_target,multimodal,7
+detection_target,visual,5
+detection_target,qr/quishing,1
+detection_target,sms/smishing,1
+model_substrate,classical ML,37
+model_substrate,deep learning,35
+model_substrate,boosted trees,34
+model_substrate,transformer/LLM,23
+model_substrate,ensemble/AutoML,22
+model_substrate,hybrid ML/DL,19
+model_substrate,random forest,14
+model_substrate,CNN,10
+model_substrate,optimization-assisted ML,8
+model_substrate,CNN/visual detector,5
+model_substrate,few-shot learning,1
+model_substrate,MLOps/adaptive lifecycle,1
+explanation_method,SHAP,58
+explanation_method,LIME,46
+explanation_method,LLM natural-language explanation,9
+explanation_method,attention/transformer visualization,9
+explanation_method,Grad-CAM,3
+explanation_method,Explainable Boosting Machine,3
+explanation_method,Grad-CAM/CAM,3
+explanation_method,counterfactual explanation,2
+explanation_method,analyst dashboard visualization,1
+explanation_method,PDP,1
+explanation_method,domain-brand inconsistency explanation,1
+explanation_method,IGAM,1
+explanation_method,hierarchical modality ablation,1
+explanation_method,BERTViz,1
+explanation_method,integrated gradients,1
+explanation_method,custom text-highlight explanation,1
+explanation_method,Shapash/ELI5,1
+explanation_purpose,model inspection,26
+explanation_purpose,local decision rationale,24
+explanation_purpose,operational interface support,19
+explanation_purpose,robustness/failure analysis,9
+explanation_purpose,explanation-informed modeling,6
+evidence_maturity,artifact,58
+evidence_maturity,interface,14
+evidence_maturity,human interpretation,11
+evidence_maturity,decision/behavior,1

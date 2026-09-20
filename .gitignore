@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+outputs/
+*.pyc
+*.pyo
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.svg
+*.pdf
+*.tex
+*.docx
+.env
+.env.*

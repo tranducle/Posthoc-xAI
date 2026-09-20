@@ -1,0 +1,21 @@
+﻿dimension,level,study_count,percentage_of_84
+trust_evidence,none/rhetorical,66,78.6
+trust_evidence,automated proxy,6,7.1
+trust_evidence,explicit human/user/analyst evaluation,11,13.1
+trust_evidence,behavior/field outcome,1,1.2
+operational_evidence,prototype/interface,16,19.0
+operational_evidence,runtime/resource,26,31.0
+operational_evidence,none,37,44.0
+operational_evidence,workflow/lifecycle,4,4.8
+operational_evidence,field setting,1,1.2
+validation_gate,interface,14,16.7
+validation_gate,artifact,58,69.0
+validation_gate,human interpretation,11,13.1
+validation_gate,decision/behavior,1,1.2
+reproducibility,low,8,9.5
+reproducibility,moderate,65,77.4
+reproducibility,high,10,11.9
+reproducibility,unclear,1,1.2
+claim_risk,moderate,51,60.7
+claim_risk,low,11,13.1
+claim_risk,high,22,26.2

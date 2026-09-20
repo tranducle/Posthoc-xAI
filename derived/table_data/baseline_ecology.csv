@@ -1,0 +1,8 @@
+﻿baseline_category,study_count,percentage_of_84
+classical_ml,55,65.5
+boosted_ensemble,45,53.6
+deep_transformer_llm,41,48.8
+optimization_metaheuristic,8,9.5
+ablation_feature_fusion,12,14.3
+external_literature,18,21.4
+operational_service,7,8.3

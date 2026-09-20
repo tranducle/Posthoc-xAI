@@ -1,0 +1,6 @@
+﻿explanation_role,studies,artifact_gate,interface_gate,human_interpretation_gate,decision_behavior_gate,operational_none,runtime_resource,prototype_interface,workflow_lifecycle,field_setting
+explanation-informed modeling,6,6,0,0,0,3,3,0,0,0
+local decision rationale,24,19,0,5,0,12,11,0,0,1
+model inspection,26,25,1,0,0,17,8,1,0,0
+operational interface support,19,0,12,6,1,0,0,15,4,0
+robustness/failure analysis,9,8,1,0,0,5,4,0,0,0

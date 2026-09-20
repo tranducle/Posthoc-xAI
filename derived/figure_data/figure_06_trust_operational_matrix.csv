@@ -1,0 +1,21 @@
+﻿trust_evidence,operational_evidence,study_count
+none/rhetorical,none,32
+none/rhetorical,runtime/resource,23
+none/rhetorical,prototype/interface,10
+none/rhetorical,workflow/lifecycle,1
+none/rhetorical,field setting,0
+automated proxy,none,3
+automated proxy,runtime/resource,1
+automated proxy,prototype/interface,2
+automated proxy,workflow/lifecycle,0
+automated proxy,field setting,0
+explicit human/user/analyst evaluation,none,2
+explicit human/user/analyst evaluation,runtime/resource,2
+explicit human/user/analyst evaluation,prototype/interface,4
+explicit human/user/analyst evaluation,workflow/lifecycle,2
+explicit human/user/analyst evaluation,field setting,1
+behavior/field outcome,none,0
+behavior/field outcome,runtime/resource,0
+behavior/field outcome,prototype/interface,0
+behavior/field outcome,workflow/lifecycle,1
+behavior/field outcome,field setting,0
