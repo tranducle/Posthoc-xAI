@@ -16,6 +16,28 @@ This codebook defines the study-level variables used in the evidence-maturity an
 
 ---
 
+## Conceptual provenance and validation status
+
+The evidence-assessment framework is a synthesis device developed for this review. It draws on established XAI evaluation ideas rather than treating technical explanation quality, human-centered evaluation, usability, trust, or application-grounded evaluation as new constructs.
+
+The following prior work informed the operational distinctions used here:
+
+- Barredo Arrieta et al. (2020), *Information Fusion*, DOI 10.1016/j.inffus.2019.12.012: broad XAI concepts, taxonomies, model/explanation scope, and audience-aware explainability.
+- Mohseni et al. (2021), *ACM Transactions on Interactive Intelligent Systems*, DOI 10.1145/3387166: mapping among XAI design goals, user groups, and evaluation methods.
+- Vilone and Longo (2021), *Information Fusion*, DOI 10.1016/j.inffus.2021.05.009: distinction between human-centered evaluation and evaluation with more objective metrics.
+- Zhou et al. (2021), *Electronics*, DOI 10.3390/electronics10050593: functionality-grounded, human-grounded, and application-grounded evaluation.
+- Hoffman et al. (2023), *Frontiers in Computer Science*, DOI 10.3389/fcomp.2023.1096257: explanation goodness, user satisfaction, mental models, appropriate trust and reliance, and human-AI performance.
+- Nauta et al. (2023), *ACM Computing Surveys*, DOI 10.1145/3583558: multi-property quantitative evaluation of explanation quality.
+- Rong et al. (2024), *IEEE Transactions on Pattern Analysis and Machine Intelligence*, DOI 10.1109/TPAMI.2023.3331846: human-centered XAI user studies covering trust, understanding, usability, and human-AI collaboration performance.
+
+The review-specific contribution is the joint operationalization of these established evaluation ideas with phishing-specific descriptive axes. Detection target, model substrate, explanation method, and explanation purpose describe what is being explained and why. Evidence maturity records how far the reported evidence progresses from an artifact toward interface, human, behavioral, or field evidence. Trust evidence and operational evidence are coded separately so that an automated explanation-quality metric is not treated as measured trust and an implemented prototype is not treated as field effectiveness.
+
+The claim-gating rule is also a review-level synthesis rule: a conclusion is limited to the strongest evidence actually reported by the primary study. It does not replace method-specific faithfulness, stability, usability, or explanation-quality evaluation.
+
+The framework is **proposed and review-derived**. The 72-study coding-reliability analysis evaluates consistency of applying this codebook within the present corpus. It is not independent external validation of the framework as a general XAI standard. External validation would require independent expert application to a new corpus, structured expert-consensus assessment, or replication in another cybersecurity-XAI domain.
+
+---
+
 ## Axis A: Primary explanation role
 
 ### A1. Model inspection

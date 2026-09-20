@@ -1,6 +1,6 @@
 # Post-hoc xAI phishing review: reproducibility package
 
-This repository contains the study-level data, coding records, and reproducibility scripts for the systematic review **“Post-Hoc Explainable AI for Learning-Based Phishing Detection: A Systematic Literature Review and Evidence-Maturity Taxonomy.”**
+This repository contains the study-level data, coding records, and reproducibility scripts for the systematic review **"Post-Hoc Explainable AI for Learning-Based Phishing Detection: A Systematic Literature Review and Evidence-Maturity Framework."**
 
 The package is designed to reproduce the review's reported counts, percentages, sensitivity analyses, coding-reliability statistics, and the data underlying its tables and figures. It does not contain the manuscript, publisher PDFs, paper figures, or raw database exports.
 

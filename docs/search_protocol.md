@@ -1,6 +1,6 @@
 # Supplementary File S1: Search Protocol and Source Metadata
 
-**Article Title:** Post-Hoc Explainable AI for Learning-Based Phishing Detection: A Systematic Literature Review and Evidence-Maturity Taxonomy  
+**Article Title:** Post-Hoc Explainable AI for Learning-Based Phishing Detection: A Systematic Literature Review and Evidence-Maturity Framework  
 **Journal Name:** Applied Intelligence  
 **Authors:** [Withheld for Anonymous Review]  
 **Corresponding Author:** [Withheld for Anonymous Review]
