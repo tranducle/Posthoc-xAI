@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Regenerate the six review figures from repository data.
+"""Regenerate the five review figures from repository data.
 
 Generated image files are written to outputs/ and are intentionally excluded
 from version control. The repository stores the source data and generation code,
@@ -99,24 +99,8 @@ ax.set_title("Evidence-maturity ladder")
 save(fig, "figure_04_evidence_ladder")
 
 
-# Figure 5: explanation-to-outcome pipeline.
-rows = read_csv("figure_05_explanation_outcome_pipeline.csv")
-fig, ax = plt.subplots(figsize=(11, 5.5))
-ax.axis("off")
-for idx, r in enumerate(rows):
-    x = idx / max(1, len(rows) - 1)
-    ax.text(x, 0.65, r["stage"], ha="center", va="center", fontsize=11, weight="bold", wrap=True)
-    ax.text(x, 0.28, r["evidence_question"], ha="center", va="center", fontsize=9, wrap=True)
-    if idx < len(rows) - 1:
-        ax.annotate("", xy=(x + 0.19, 0.65), xytext=(x + 0.06, 0.65), arrowprops={"arrowstyle": "->"})
-ax.set_xlim(-0.08, 1.08)
-ax.set_ylim(0, 1)
-ax.set_title("Explanation-to-outcome evidence pipeline")
-save(fig, "figure_05_explanation_outcome_pipeline")
-
-
-# Figure 6: trust x operational evidence matrix.
-rows = read_csv("figure_06_trust_operational_matrix.csv")
+# Figure 5: trust x operational evidence matrix.
+rows = read_csv("figure_05_trust_operational_matrix.csv")
 trust = []
 operational = []
 for r in rows:
@@ -136,6 +120,6 @@ for i, row in enumerate(matrix):
     for j, value in enumerate(row):
         ax.text(j, i, str(value), ha="center", va="center")
 fig.colorbar(im, ax=ax, label="Study count")
-save(fig, "figure_06_trust_operational_matrix")
+save(fig, "figure_05_trust_operational_matrix")
 
-print(f"Generated 6 figures under {OUT.relative_to(ROOT)}/")
+print(f"Generated 5 figures under {OUT.relative_to(ROOT)}/")

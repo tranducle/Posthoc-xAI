@@ -34,7 +34,6 @@ This file maps the review's quantitative artifacts to the public data used to re
 | Figure 2: five-axis evidence-assessment framework | `derived/figure_data/figure_02_taxonomy_axes.csv` |
 | Figure 3: modality-method matrix | `derived/figure_data/figure_03_modality_method_matrix.csv` |
 | Figure 4: evidence ladder | `derived/figure_data/figure_04_evidence_ladder.csv` |
-| Figure 5: explanation-to-outcome pipeline | `derived/figure_data/figure_05_explanation_outcome_pipeline.csv` |
-| Figure 6: trust-operation matrix | `derived/figure_data/figure_06_trust_operational_matrix.csv` |
+| Figure 5: trust-operation matrix | `derived/figure_data/figure_05_trust_operational_matrix.csv` |
 
 Run `python scripts/reproduce_results.py` to regenerate all generated payloads.

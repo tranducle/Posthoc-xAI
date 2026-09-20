@@ -101,8 +101,8 @@ def cohen_kappa(a: list[str], b: list[str], ordered: bool) -> float:
     k = len(labels)
     n = len(a)
     matrix = [[0] * k for _ in range(k)]
-    for x, y in zip(a, b):
-        matrix[index[x]][index[y]] += 1
+    for left_label, right_label in zip(a, b):
+        matrix[index[left_label]][index[right_label]] += 1
     row = [sum(values) for values in matrix]
     col = [sum(matrix[i][j] for i in range(k)) for j in range(k)]
     if ordered:
@@ -390,24 +390,12 @@ write_csv(
     ],
 )
 
-# Figure 5: explanation-to-outcome pipeline definitions.
-write_csv(
-    FIGURES / "figure_05_explanation_outcome_pipeline.csv",
-    [
-        {"step": 1, "stage": "detector performance", "evidence_question": "Does the detector classify reliably?"},
-        {"step": 2, "stage": "explanation artifact", "evidence_question": "Is a post-hoc explanation produced and characterized?"},
-        {"step": 3, "stage": "interface or workflow", "evidence_question": "Is the explanation integrated into a usable operational context?"},
-        {"step": 4, "stage": "human interpretation", "evidence_question": "Do intended users understand or use the explanation?"},
-        {"step": 5, "stage": "decision or field outcome", "evidence_question": "Does the explanation change decisions, behavior, workload, or security outcomes?"},
-    ],
-)
-
-# Figure 6: trust x operational matrix.
+# Figure 5: trust x operational matrix.
 trust_levels = ["none/rhetorical", "automated proxy", "explicit human/user/analyst evaluation", "behavior/field outcome"]
 op_levels = ["none", "runtime/resource", "prototype/interface", "workflow/lifecycle", "field setting"]
 matrix = Counter((r["trust_evidence_level"], r["operational_evidence_level"]) for r in master)
 write_csv(
-    FIGURES / "figure_06_trust_operational_matrix.csv",
+    FIGURES / "figure_05_trust_operational_matrix.csv",
     [
         {"trust_evidence": t, "operational_evidence": o, "study_count": matrix[(t, o)]}
         for t in trust_levels

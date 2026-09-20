@@ -1,6 +1,0 @@
-﻿step,stage,evidence_question
-1,detector performance,Does the detector classify reliably?
-2,explanation artifact,Is a post-hoc explanation produced and characterized?
-3,interface or workflow,Is the explanation integrated into a usable operational context?
-4,human interpretation,Do intended users understand or use the explanation?
-5,decision or field outcome,"Does the explanation change decisions, behavior, workload, or security outcomes?"

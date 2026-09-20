@@ -71,7 +71,7 @@ python scripts/reproduce_figures.py
 
 The figure script writes PNG and PDF files to `outputs/`. That directory is ignored by Git because this repository distributes the source data and generation code rather than manuscript image files.
 
-Figures 1, 3, and 6 are directly data-driven. Figures 2, 4, and 5 are conceptual summaries; their categories, levels, and pipeline definitions are stored as CSV files in `derived/figure_data/` so the displayed structure is auditable.
+Figures 1, 3, and 5 are directly data-driven. Figures 2 and 4 are conceptual summaries; their categories and evidence levels are stored as CSV files in `derived/figure_data/` so the displayed structure is auditable.
 
 ## Reproduce table data
 
