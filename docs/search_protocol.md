@@ -1,9 +1,9 @@
-# Supplementary File S1: Search Protocol and Source Metadata
+# Search Protocol and Source Metadata
 
 **Article Title:** Post-Hoc Explainable AI for Learning-Based Phishing Detection: A Systematic Literature Review and Evidence-Maturity Framework  
 **Journal Name:** Applied Intelligence  
-**Authors:** [Withheld for Anonymous Review]  
-**Corresponding Author:** [Withheld for Anonymous Review]
+**Authors:** Tran Duc Le, Truong Duy Dinh  
+**Corresponding Author:** Tran Duc Le (tranducle@tvu.edu.vn)
 
 ---
 
@@ -93,13 +93,13 @@ The `core post-hoc` label denotes studies in which post-hoc explanation is used 
 
 Before the final synthesis was regenerated, all 84 included studies underwent a record-level audit. Publication year, title, and DOI information were checked against DOI-based Version-of-Record metadata or another official bibliographic record where no DOI was available. Five publication years were corrected: Yakandawala et al. from 2025 to 2024, Uddin et al. from 2024 to 2026, Mia et al. from 2025 to 2024, Lakshmi et al. from 2025 to 2026, and Yi et al. from 2025 to 2026. Records that could not be verified safely through automated metadata matching were checked manually against the official article or proceedings record.
 
-The full texts were also rechecked against the S5 codebook for primary modality, post-hoc xAI method, validation design, explanation role, mixed-purpose use, trust evidence, operational evidence, validation gate, reproducibility, and claim-evidence risk. Forty-eight of the 84 studies required at least one metadata or coding correction, corresponding to 134 field-level corrections in the audit ledger. The largest changes concerned explanation role, mixed-purpose classification, validation gate, reproducibility, and operational evidence. In particular, the final mixed-purpose rule requires the explanation output itself to affect a feature or model-development decision; the presence of feature selection or optimization elsewhere in a pipeline is not sufficient.
+The full texts were also rechecked against the operational evidence-maturity codebook (`docs/coding_codebook.md`) for primary modality, post-hoc xAI method, validation design, explanation role, mixed-purpose use, trust evidence, operational evidence, validation gate, reproducibility, and claim-evidence risk. Forty-eight of the 84 studies required at least one metadata or coding correction, corresponding to 134 field-level corrections in the audit ledger. The largest changes concerned explanation role, mixed-purpose classification, validation gate, reproducibility, and operational evidence. In particular, the final mixed-purpose rule requires the explanation output itself to affect a feature or model-development decision; the presence of feature selection or optimization elsewhere in a pipeline is not sufficient.
 
 A corrected canonical study-level dataset was then used to regenerate the temporal distribution, modality and xAI summaries, evidence-maturity counts, validation-design counts, sensitivity analyses, Table A1, and the data-dependent figures. The corrected temporal distribution is 3 studies in 2021, 1 in 2022, 4 in 2023, 13 in 2024, 42 in 2025, and 21 in 2026. Thus, 63 of 84 studies (75.0%) fall in 2025-2026. The audit did not alter the PRISMA study-selection counts.
 
 ## Coding reliability assessment
 
-Supplementary File S5 contains the detailed evidence-maturity codebook. Supplementary File S6 contains the study-level reliability record. Tran Duc Le and Truong Duy Dinh were responsible for the reliability assessment design and review of disagreements.
+The detailed evidence-maturity codebook is provided in `docs/coding_codebook.md`. The study-level reliability record is provided in `data/coding/coding_reliability.csv`. Tran Duc Le and Truong Duy Dinh were responsible for the reliability assessment design and review of disagreements.
 
 Paired independent human labels were not retained during the initial collaborative coding. A retrospective human inter-rater coefficient is therefore not reported. Instead, 12 studies were used to calibrate category boundaries, and reliability was assessed on the remaining 72 studies. Two separate coding passes were produced from the fixed extraction records using the same codebook, with the final study labels withheld until agreement had been calculated. Disagreements were then reviewed against the extraction record and, where needed, the primary-study evidence.
 
@@ -119,8 +119,8 @@ Kappa is unweighted for nominal axes and quadratic-weighted for ordered axes. Ex
 
 ## Screening and extraction records
 
-The final full-text screening record is provided in Supplementary File S2. The extraction matrix is provided in Supplementary File S3. Derived evidence-maturity and synthesis coding files are provided in Supplementary Files S4a-S4e.
+The final full-text screening record is provided in `data/screening/full_text_screening.csv`. The extraction matrix is provided in `data/extraction/study_extraction.csv`. Derived evidence-maturity and synthesis coding files are provided in `data/coding/` (including `baseline_comparison.csv`, `dataset_validity.csv`, `evidence_maturity.csv`, `explanation_scope_reliability.csv`, `metric_ecology.csv`, and `temporal_design.csv`).
 
-S2 includes stable `screening_record_id`, database/source identifier, source list, year, DOI where available, DOI status, inclusion/exclusion decision, primary exclusion code, and harmonized exclusion reason. S3 and S4a-S4e repeat `screening_record_id`, source identifier, source list, DOI, and DOI status so that each extracted or derived coding row can be traced back to the full-text screening record. Blank DOI cells indicate records for which no DOI was identified or no DOI was recorded in the export metadata; the `doi_status` column states the reason.
+The screening file includes stable `screening_record_id`, database/source identifier, source list, year, DOI where available, DOI status, inclusion/exclusion decision, primary exclusion code, and harmonized exclusion reason. The extraction and coding files repeat `screening_record_id`, source identifier, source list, DOI, and DOI status so that each extracted or derived coding row can be traced back to the full-text screening record. Blank DOI cells indicate records for which no DOI was identified or no DOI was recorded in the export metadata; the `doi_status` column states the reason.
 
 The harmonized full-text exclusion reasons used in the manuscript are: non-primary/review/framework/vision article; no implemented or separable post-hoc xAI or intrinsic/feature-only interpretability; xAI mechanism underspecified or not extractable; not phishing-central or broader/different predictive target; duplicate or near-duplicate; and full text unavailable, unverifiable, or not retrievable.

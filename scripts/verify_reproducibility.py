@@ -124,7 +124,7 @@ for name, passed in checks.items():
     if not passed:
         errors.append(f"aggregate check failed: {name}")
 
-# Reliability values reported in the revised supplement.
+# Reported coding-reliability values.
 reliability = read_csv(DERIVED / "table_data" / "coding_reliability.csv")
 expected_reliability = {
     "explanation_role_primary": (100.0, 1.000, 1.000),

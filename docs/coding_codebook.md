@@ -1,4 +1,4 @@
-# Supplementary File S5: Evidence-Maturity Coding Codebook
+# Evidence-Maturity Coding Codebook
 
 ## Scope
 
@@ -355,4 +355,4 @@ Kappa is unweighted for nominal axes and quadratic-weighted for ordered axes. Th
 
 Claim-evidence risk showed the lowest agreement of the seven axes. It is therefore treated as an interpretive warning flag rather than an objective quality score.
 
-Study-level labels from both coding passes, agreement indicators, final labels, and disagreement-resolution notes are provided in Supplementary File S6.
+Study-level labels from both coding passes, agreement indicators, final labels, and disagreement-resolution notes are provided in `data/coding/coding_reliability.csv`.

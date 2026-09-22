@@ -31,7 +31,7 @@ This command reads the public study-level records and regenerates:
 - `derived/aggregate_results.json`;
 - quantitative table payloads under `derived/table_data/`;
 - figure data/definitions under `derived/figure_data/`;
-- the coding-reliability table from the two coding passes in S6;
+- the coding-reliability table from the two coding passes in `data/coding/coding_reliability.csv`;
 - the explanation-scope and explanation-guided reliability summary from `data/coding/explanation_scope_reliability.csv`.
 
 The script does not read the manuscript and does not use hard-coded local filesystem paths.
@@ -47,12 +47,12 @@ The gate checks:
 - 84 unique included studies;
 - 156 full texts assessed, with 84 included and 72 excluded;
 - annual publication counts;
-- 63/84 studies in 2025–2026;
+- 63/84 studies in 2025-2026;
 - 76 core post-hoc and 8 mixed-purpose studies;
 - SHAP in 58 studies and LIME in 46;
 - explanation scope: 34 local-only, 14 global-only, and 36 studies using both scopes;
 - overlapping explanation use: 70 studies with local explanations and 50 with global explanations;
-- 2 studies with relatively direct positive explanation-guided reliability evidence;
+- 2 studies with direct positive explanation-guided reliability evidence;
 - validation-design counts;
 - trust, operational, validation-gate, reproducibility, and claim-risk counts;
 - 72-study holdout agreement, Cohen/weighted kappa, and Gwet AC1 values.

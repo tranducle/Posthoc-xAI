@@ -11,7 +11,7 @@ The package is designed to reproduce the review's reported counts, percentages, 
 - `data/coding/`: evidence-maturity, dataset, metric, baseline, temporal, explanation-scope/reliability, and coding-reliability records.
 - `data/canonical/study_master.csv`: canonical 84-study record used for the final synthesis.
 - `derived/table_data/`: machine-readable data underlying the quantitative tables.
-- `derived/figure_data/`: machine-readable data or definitions underlying Figures 1–5.
+- `derived/figure_data/`: machine-readable data or definitions underlying Figures 1-5.
 - `scripts/reproduce_results.py`: recomputes aggregate results and table/figure payloads.
 - `scripts/reproduce_figures.py`: regenerates five stand-alone figures into a local `outputs/` directory.
 - `scripts/verify_reproducibility.py`: checks the reported headline counts and reliability statistics.
