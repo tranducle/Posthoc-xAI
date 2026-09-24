@@ -3,7 +3,7 @@
 **Article Title:** Post-Hoc Explainable AI for Learning-Based Phishing Detection: A Systematic Literature Review and Evidence-Maturity Framework  
 **Journal Name:** Applied Intelligence  
 **Authors:** Tran Duc Le, Truong Duy Dinh  
-**Corresponding Author:** Tran Duc Le (tranducle@tvu.edu.vn)
+**Corresponding Author:** Tran Duc Le (let@uwstout.edu)
 
 ---
 
